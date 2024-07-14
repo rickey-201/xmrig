@@ -4,7 +4,7 @@ WORKDIR /app
 COPY ./* /app/
 RUN apt-get update
 RUN apt install -y git build-essential cmake automake libtool autoconf
-RUN mkdir build
+RUN mkdir /app/build
 WORKDIR /app/scripts
 RUN ./build_deps.sh
 WORKDIR /app/build
