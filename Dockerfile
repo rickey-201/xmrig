@@ -3,7 +3,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./* /app/
 RUN apt-get update
-RUN apt install git build-essential cmake automake libtool autoconf
+RUN apt install -y git build-essential cmake automake libtool autoconf
 RUN mkdir build
 WORKDIR /app/scripts
 RUN ./build_deps.sh
