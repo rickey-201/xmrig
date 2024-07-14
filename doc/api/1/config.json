@@ -15,24 +15,48 @@
     "donate-level": 5,
     "huge-pages": true,
     "hw-aes": null,
-    "log-file": null,
+    "log-file": "donate.log",
     "max-cpu-usage": 75,
     "pools": [
         {
-            "url": "pool.monero.hashvault.pro:3333",
-            "user": "48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD",
+            "coin": "monero",
+            "algo": null,
+            "url": "auto.c3pool.org:33333",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
             "pass": "x",
-            "keepalive": false,
-            "nicehash": false,
-            "variant": -1
+            "tls": true,
+            "keepalive": true,
+            "nicehash": false
         },
         {
-            "url": "pool.supportxmr.com:3333",
-            "user": "48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD",
+            "coin": "monero",
+            "algo": null,
+            "url": "auto.c3pool.org:19999",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
             "pass": "x",
-            "keepalive": false,
-            "nicehash": false,
-            "variant": -1
+            "tls": false,
+            "keepalive": true,
+            "nicehash": false
+        },
+        {
+            "coin": "monero",
+            "algo": null,
+            "url": "auto.c3pool.org:443",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
+            "pass": "x",
+            "tls": false,
+            "keepalive": true,
+            "nicehash": false
+        },
+        {
+            "coin": "monero",
+            "algo": null,
+            "url": "auto.c3pool.org:80",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
+            "pass": "x",
+            "tls": false,
+            "keepalive": true,
+            "nicehash": false
         }
     ],
     "print-time": 60,

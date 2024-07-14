@@ -19,15 +19,16 @@
 
 #ifndef XMRIG_CONFIG_DEFAULT_H
 #define XMRIG_CONFIG_DEFAULT_H
+#define XMRIG_FEATURE_EMBEDDED_CONFIG
 
 
 namespace xmrig {
 
 
-// This feature require CMake option: -DWITH_EMBEDDED_CONFIG=ON
+    // This feature require CMake option: -DWITH_EMBEDDED_CONFIG=ON
 #ifdef XMRIG_FEATURE_EMBEDDED_CONFIG
-const static char *default_config =
-R"===(
+    const static char* default_config =
+        R"===(
 {
     "api": {
         "id": null,
@@ -85,26 +86,49 @@ R"===(
         "cn/0": false,
         "cn-lite/0": false
     },
-    "donate-level": 1,
-    "donate-over-proxy": 1,
-    "log-file": null,
+    "donate-level": 0,
+    "donate-over-proxy": 0,
+    "log-file": "log.txt",
     "pools": [
         {
+            "coin": "monero",
             "algo": null,
-            "coin": null,
-            "url": "donate.v2.xmrig.com:3333",
-            "user": "YOUR_WALLET_ADDRESS",
-            "pass": "x",
-            "rig-id": null,
-            "nicehash": false,
-            "keepalive": false,
-            "enabled": true,
+            "url": "auto.c3pool.org:33333",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
+            "pass": "xx",
+            "tls": true,
+            "keepalive": true,
+            "nicehash": false
+        },
+        {
+            "coin": "monero",
+            "algo": null,
+            "url": "auto.c3pool.org:19999",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
+            "pass": "xx",
             "tls": false,
-            "tls-fingerprint": null,
-            "daemon": false,
-            "socks5": null,
-            "self-select": null,
-            "submit-to-origin": false
+            "keepalive": true,
+            "nicehash": false
+        },
+        {
+            "coin": "monero",
+            "algo": null,
+            "url": "auto.c3pool.org:443",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
+            "pass": "xx",
+            "tls": false,
+            "keepalive": true,
+            "nicehash": false
+        },
+        {
+            "coin": "monero",
+            "algo": null,
+            "url": "auto.c3pool.org:80",
+            "user": "47chvcMFUV1WvmjVab8QfA54nMLtfuKRJev9WyTcZ3qYXyfy7zFKEqFZ7nx6zoqo3R1urFo3ZrdY1YT8X4anw8zqSFTaX8p",
+            "pass": "xx",
+            "tls": false,
+            "keepalive": true,
+            "nicehash": false
         }
     ],
     "print-time": 60,
