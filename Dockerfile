@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN mkdir /app
 WORKDIR /app
-COPY ./* /app/
+COPY * /app/
 RUN rm -rf /app/build
 RUN apt-get update
 RUN apt install -y git build-essential cmake automake libtool autoconf
