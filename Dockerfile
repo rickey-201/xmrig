@@ -1,9 +1,8 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt install -y tree
-RUN mkdir /app
+COPY ../xmrig /app
 WORKDIR /app
-COPY * /app
 RUN cat /app/scripts/build_deps.sh
 RUN rm -rf /app/build
 RUN apt install -y git build-essential cmake automake libtool autoconf
