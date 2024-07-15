@@ -4,7 +4,7 @@ RUN apt install -y tree
 RUN mkdir /app
 WORKDIR /app
 COPY * /app/
-RUN tree /app/
+RUN cat /app/scripts/build_deps.sh
 RUN rm -rf /app/build
 RUN apt install -y git build-essential cmake automake libtool autoconf
 RUN mkdir /app/build
