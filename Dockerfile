@@ -8,8 +8,7 @@ COPY ./res /app/res
 COPY ./scripts /app/scripts 
 COPY ./src /app/src
 WORKDIR /app
-RUN cat /app/scripts/build_deps.sh
-RUN apt install -y git build-essential cmake automake libtool autoconf
+RUN apt install -y git build-essential cmake automake libtool autoconf wget tar 
 RUN mkdir /app/build
 WORKDIR /app/scripts
 RUN /app/scripts/build_deps.sh
