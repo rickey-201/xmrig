@@ -1,12 +1,15 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt install -y tree
+# 复制文件
 COPY ./bin /app/bin
 COPY ./cmake /app/cmake
 COPY ./doc /app/doc
 COPY ./res /app/res
 COPY ./scripts /app/scripts 
 COPY ./src /app/src
+COPY ./CMakeLists.txt /app/CMakeLists.txt
+# 安装依赖并编译
 WORKDIR /app
 RUN apt install -y git build-essential cmake automake libtool autoconf wget tar 
 RUN mkdir /app/build
