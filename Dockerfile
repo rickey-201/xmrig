@@ -1,10 +1,14 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt install -y tree
-COPY ../xmrig /app
+COPY ./bin /app/bin
+COPY ./cmake /app/cmake
+COPY ./doc /app/doc
+COPY ./res /app/res
+COPY ./scripts /app/scripts 
+COPY ./src /app/src
 WORKDIR /app
 RUN cat /app/scripts/build_deps.sh
-RUN rm -rf /app/build
 RUN apt install -y git build-essential cmake automake libtool autoconf
 RUN mkdir /app/build
 WORKDIR /app/scripts
