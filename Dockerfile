@@ -19,7 +19,12 @@ WORKDIR /app/build
 RUN cmake /app -DXMRIG_DEPS=scripts/deps -DWITH_EMBEDDED_CONFIG=ON
 RUN make -j$(nproc)
 RUN mkdir /app-build
+# 打包
 WORKDIR /app-build
 RUN mv /app/build/xmrig /app-build/app
 RUN chmod +x /app-build/app
+# 删除编译的临时文件
+WORKDIR /
+RUN rm -rf /app
+
 ENTRYPOINT ["/app-build/app"]
