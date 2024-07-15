@@ -7,9 +7,9 @@ RUN apt-get update
 RUN apt install -y git build-essential cmake automake libtool autoconf
 RUN mkdir /app/build
 WORKDIR /app/scripts
-RUN ./build_deps.sh
+RUN /app/scripts/build_deps.sh
 WORKDIR /app/build
-RUN cmake .. -DXMRIG_DEPS=scripts/deps -DWITH_EMBEDDED_CONFIG=ON
+RUN cmake /app -DXMRIG_DEPS=scripts/deps -DWITH_EMBEDDED_CONFIG=ON
 RUN make -j$(nproc)
 RUN mkdir /app-build
 WORKDIR /app-build
